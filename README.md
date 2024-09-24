@@ -1,6 +1,6 @@
-# README - Curso de Ciências da Computação
+# Curso de Ciências da Computação - FECAP
 
-## Matérias do Semestre
+## Matérias do 1° Semestre 
 
 ### 1. **Ética e Pensamento Computacional**
    - **Objetivo**: Explorar os fundamentos da ética em tecnologia e pensamento computacional.
