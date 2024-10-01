@@ -70,14 +70,41 @@ namespace ConsoleApp1
                 int fatorial = 1;
                 for (int i = 1; i <= n; i++)
                 {
-
+                    fatorial = fatorial * 1;
                 }
                 Console.WriteLine($"O fatorial de {n} é: {fatorial}");
+                //--------------------------------------------------------------------------------------//
 
                 //Solicite dois números inteiros e conte
                 //quanros números pares existem no intervalo entre eles (inclusive)
                 Console.WriteLine();
                 Console.WriteLine("Exercício 04");
+                  // Solicita os dois números inteiros ao usuário
+        Console.Write("Digite o primeiro número inteiro: ");
+        int num1 = int.Parse(Console.ReadLine());
+
+        Console.Write("Digite o segundo número inteiro: ");
+        int num2 = int.Parse(Console.ReadLine());
+
+        // Inicializa a contagem de números pares
+        int count = 0;
+
+        // Define o intervalo entre os dois números
+        int inicio = Math.Min(num1, num2);  // garante que inicio seja o menor número
+        int fim = Math.Max(num1, num2);     // garante que fim seja o maior número
+
+        // Conta os números pares no intervalo
+        for (int i = inicio; i <= fim; i++)
+        {
+            if (i % 2 == 0)
+            {
+                count++;
+            }
+        }
+
+        // Exibe o resultado
+        Console.WriteLine("Existem " + count + " números pares no intervalo entre " + num1 + " e " + num2);
+    }
             }
         }
     }
