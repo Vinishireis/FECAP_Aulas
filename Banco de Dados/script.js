@@ -342,6 +342,216 @@ const QuizQuestions = {
       explanation:
         "Entidades fracas dependem de outra entidade (forte) para serem identificadas, geralmente com chave parcial e ligação obrigatória.",
     },
+    {
+      id: "q26",
+      text: "26. Em um relacionamento entre PROFESSOR e DISCIPLINA: Um professor pode lecionar várias disciplinas; uma disciplina deve ser lecionada por exatamente um professor. Qual a cardinalidade correta?",
+      options: [
+        "PROFESSOR (1,1) ——— (0,N) DISCIPLINA",
+        "PROFESSOR (1,N) ——— (0,1) DISCIPLINA",
+        "PROFESSOR (0,N) ——— (1,1) DISCIPLINA",
+        "PROFESSOR (0,1) ——— (1,N) DISCIPLINA",
+        "PROFESSOR (1,N) ——— (1,N) DISCIPLINA",
+      ],
+      answer: "PROFESSOR (1,N) ——— (1,1) DISCIPLINA",
+      explanation:
+        "Um professor pode ter várias disciplinas (1,N), e uma disciplina deve ter exatamente um professor (1,1). A opção mais próxima é a segunda, mas o correto seria (1,1) no lado da DISCIPLINA (não (0,1)).",
+    },
+    {
+      id: "q27",
+      text: "27. Em um relacionamento entre ALUNO e MATRÍCULA: Um aluno pode ter várias matrículas; uma matrícula pertence a apenas um aluno. Qual a cardinalidade correta?",
+      options: [
+        "ALUNO (0,N) ——— (1,1) MATRÍCULA",
+        "ALUNO (1,1) ——— (0,N) MATRÍCULA",
+        "ALUNO (1,N) ——— (1,1) MATRÍCULA",
+        "ALUNO (0,1) ——— (1,N) MATRÍCULA",
+        "ALUNO (1,N) ——— (1,N) MATRÍCULA",
+      ],
+      answer: "ALUNO (1,N) ——— (1,1) MATRÍCULA",
+      explanation:
+        "Um aluno pode ter várias matrículas (1,N), e uma matrícula deve estar associada a exatamente um aluno (1,1).",
+    },
+    {
+      id: "q28",
+      text: "28. Em um relacionamento entre AUTOR e LIVRO: Um autor pode escrever vários livros; um livro pode ter vários autores. Qual a cardinalidade correta?",
+      options: [
+        "AUTOR (1,1) ——— (0,N) LIVRO",
+        "AUTOR (1,N) ——— (1,N) LIVRO",
+        "AUTOR (0,N) ——— (0,N) LIVRO",
+        "AUTOR (0,1) ——— (1,N) LIVRO",
+        "AUTOR (1,1) ——— (1,1) LIVRO",
+      ],
+      answer: "AUTOR (0,N) ——— (0,N) LIVRO",
+      explanation:
+        "É um relacionamento muitos-para-muitos (N:N), onde um autor pode escrever zero ou mais livros, e um livro pode ter zero ou mais autores.",
+    },
+    {
+      id: "q29",
+      text: "29. Em um relacionamento entre CLIENTE e PEDIDO: Um cliente pode fazer vários pedidos; um pedido pertence a apenas um cliente. Qual a cardinalidade correta?",
+      options: [
+        "CLIENTE (0,N) ——— (1,1) PEDIDO",
+        "CLIENTE (1,1) ——— (0,N) PEDIDO",
+        "CLIENTE (1,N) ——— (1,1) PEDIDO",
+        "CLIENTE (0,1) ——— (1,N) PEDIDO",
+        "CLIENTE (1,N) ——— (1,N) PEDIDO",
+      ],
+      answer: "CLIENTE (0,N) ——— (1,1) PEDIDO",
+      explanation:
+        "Um cliente pode fazer zero ou mais pedidos (0,N), e um pedido deve estar associado a exatamente um cliente (1,1).",
+    },
+    {
+      id: "q30",
+      text: "30. Em um relacionamento entre DEPARTAMENTO e FUNCIONÁRIO: Um departamento pode ter vários funcionários; um funcionário trabalha em apenas um departamento. Qual a cardinalidade correta?",
+      options: [
+        "DEPARTAMENTO (1,1) ——— (0,N) FUNCIONÁRIO",
+        "DEPARTAMENTO (1,N) ——— (1,1) FUNCIONÁRIO",
+        "DEPARTAMENTO (0,N) ——— (1,1) FUNCIONÁRIO",
+        "DEPARTAMENTO (0,1) ——— (1,N) FUNCIONÁRIO",
+        "DEPARTAMENTO (1,N) ——— (1,N) FUNCIONÁRIO",
+      ],
+      answer: "DEPARTAMENTO (0,N) ——— (1,1) FUNCIONÁRIO",
+      explanation:
+        "Um departamento pode ter zero ou mais funcionários (0,N), e um funcionário deve estar alocado em exatamente um departamento (1,1).",
+    },
+    {
+      id: "q31",
+      text: "31. Em um relacionamento entre PACIENTE e CONSULTA: Um paciente pode agendar várias consultas; uma consulta pertence a apenas um paciente. Qual a cardinalidade correta?",
+      options: [
+        "PACIENTE (1,1) ——— (0,N) CONSULTA",
+        "PACIENTE (1,N) ——— (0,1) CONSULTA",
+        "PACIENTE (0,N) ——— (1,1) CONSULTA",
+        "PACIENTE (0,1) ——— (1,N) CONSULTA",
+        "PACIENTE (1,N) ——— (1,N) CONSULTA",
+      ],
+      answer: "PACIENTE (0,N) ——— (1,1) CONSULTA",
+      explanation:
+        "Um paciente pode ter zero ou mais consultas (0,N), e uma consulta deve estar associada a exatamente um paciente (1,1).",
+    },
+    {
+      id: "q32",
+      text: "32. Em um relacionamento entre PRODUTO e FORNECEDOR: Um produto pode ser fornecido por apenas um fornecedor; um fornecedor pode fornecer vários produtos. Qual a cardinalidade correta?",
+      options: [
+        "PRODUTO (1,1) ——— (0,N) FORNECEDOR",
+        "PRODUTO (0,N) ——— (1,1) FORNECEDOR",
+        "PRODUTO (1,N) ——— (1,1) FORNECEDOR",
+        "PRODUTO (0,1) ——— (1,N) FORNECEDOR",
+        "PRODUTO (1,N) ——— (1,N) FORNECEDOR",
+      ],
+      answer: "PRODUTO (0,N) ——— (1,1) FORNECEDOR",
+      explanation:
+        "Um produto pode ter um fornecedor (ou nenhum, se for opcional: 0,N), e um fornecedor pode fornecer vários produtos (1,N). A cardinalidade correta é (0,N) ——— (1,1), pois o produto depende do fornecedor, mas a questão não especifica se é obrigatório.",
+    },
+    {
+      id: "q33",
+      text: "33. Em um relacionamento entre TURMA e ALUNO: Uma turma pode ter vários alunos; um aluno pode estar em várias turmas. Qual a cardinalidade correta?",
+      options: [
+        "TURMA (1,1) ——— (0,N) ALUNO",
+        "TURMA (1,N) ——— (1,N) ALUNO",
+        "TURMA (0,N) ——— (0,N) ALUNO",
+        "TURMA (0,1) ——— (1,N) ALUNO",
+        "TURMA (1,1) ——— (1,1) ALUNO",
+      ],
+      answer: "TURMA (0,N) ——— (0,N) ALUNO",
+      explanation:
+        "É um relacionamento muitos-para-muitos (N:N), onde uma turma pode ter zero ou mais alunos, e um aluno pode estar em zero ou mais turmas.",
+    },
+    {
+      id: "q34",
+      text: "34. Em um relacionamento entre HOSPITAL e MÉDICO: Um hospital pode empregar vários médicos; um médico pode trabalhar em apenas um hospital. Qual a cardinalidade correta?",
+      options: [
+        "HOSPITAL (1,1) ——— (0,N) MÉDICO",
+        "HOSPITAL (1,N) ——— (1,1) MÉDICO",
+        "HOSPITAL (0,N) ——— (1,1) MÉDICO",
+        "HOSPITAL (0,1) ——— (1,N) MÉDICO",
+        "HOSPITAL (1,N) ——— (1,N) MÉDICO",
+      ],
+      answer: "HOSPITAL (0,N) ——— (1,1) MÉDICO",
+      explanation:
+        "Um hospital pode ter zero ou mais médicos (0,N), e um médico trabalha em exatamente um hospital (1,1).",
+    },
+    {
+      id: "q35",
+      text: "35. Em um relacionamento entre VEÍCULO e MANUTENÇÃO: Um veículo pode passar por várias manutenções; uma manutenção pertence a apenas um veículo. Qual a cardinalidade correta?",
+      options: [
+        "VEÍCULO (1,1) ——— (0,N) MANUTENÇÃO",
+        "VEÍCULO (1,N) ——— (0,1) MANUTENÇÃO",
+        "VEÍCULO (0,N) ——— (1,1) MANUTENÇÃO",
+        "VEÍCULO (0,1) ——— (1,N) MANUTENÇÃO",
+        "VEÍCULO (1,N) ——— (1,N) MANUTENÇÃO",
+      ],
+      answer: "VEÍCULO (0,N) ——— (1,1) MANUTENÇÃO",
+      explanation:
+        "Um veículo pode ter zero ou mais manutenções (0,N), e uma manutenção está associada a exatamente um veículo (1,1).",
+    },
+    {
+      id: "q36",
+      text: "36. Em um relacionamento entre EDITORA e LIVRO: Uma editora pode publicar vários livros; um livro é publicado por apenas uma editora. Qual a cardinalidade correta?",
+      options: [
+        "EDITORA (1,1) ——— (0,N) LIVRO",
+        "EDITORA (1,N) ——— (1,1) LIVRO",
+        "EDITORA (0,N) ——— (1,1) LIVRO",
+        "EDITORA (0,1) ——— (1,N) LIVRO",
+        "EDITORA (1,N) ——— (1,N) LIVRO",
+      ],
+      answer: "EDITORA (0,N) ——— (1,1) LIVRO",
+      explanation:
+        "Uma editora pode publicar zero ou mais livros (0,N), e um livro é publicado por exatamente uma editora (1,1).",
+    },
+    {
+      id: "q37",
+      text: "37. Em um relacionamento entre CIDADE e BAIRRO: Uma cidade pode ter vários bairros; um bairro pertence a apenas uma cidade. Qual a cardinalidade correta?",
+      options: [
+        "CIDADE (1,1) ——— (0,N) BAIRRO",
+        "CIDADE (1,N) ——— (1,1) BAIRRO",
+        "CIDADE (0,N) ——— (1,1) BAIRRO",
+        "CIDADE (0,1) ——— (1,N) BAIRRO",
+        "CIDADE (1,N) ——— (1,N) BAIRRO",
+      ],
+      answer: "CIDADE (0,N) ——— (1,1) BAIRRO",
+      explanation:
+        "Uma cidade pode ter zero ou mais bairros (0,N), e um bairro deve pertencer a exatamente uma cidade (1,1).",
+    },
+    {
+      id: "q38",
+      text: "38. Em um relacionamento entre PROJETO e FUNCIONÁRIO: Um projeto pode ter vários funcionários alocados; um funcionário pode trabalhar em vários projetos. Qual a cardinalidade correta?",
+      options: [
+        "PROJETO (1,1) ——— (0,N) FUNCIONÁRIO",
+        "PROJETO (1,N) ——— (1,N) FUNCIONÁRIO",
+        "PROJETO (0,N) ——— (0,N) FUNCIONÁRIO",
+        "PROJETO (0,1) ——— (1,N) FUNCIONÁRIO",
+        "PROJETO (1,1) ——— (1,1) FUNCIONÁRIO",
+      ],
+      answer: "PROJETO (0,N) ——— (0,N) FUNCIONÁRIO",
+      explanation:
+        "É um relacionamento muitos-para-muitos (N:N), onde um projeto pode ter zero ou mais funcionários, e um funcionário pode estar em zero ou mais projetos.",
+    },
+    {
+      id: "q39",
+      text: "39. Em um relacionamento entre CLIENTE e TELEFONE: Um cliente pode ter vários telefones; um telefone pertence a apenas um cliente. Qual a cardinalidade correta?",
+      options: [
+        "CLIENTE (1,1) ——— (0,N) TELEFONE",
+        "CLIENTE (1,N) ——— (1,1) TELEFONE",
+        "CLIENTE (0,N) ——— (1,1) TELEFONE",
+        "CLIENTE (0,1) ——— (1,N) TELEFONE",
+        "CLIENTE (1,N) ——— (1,N) TELEFONE",
+      ],
+      answer: "CLIENTE (0,N) ——— (1,1) TELEFONE",
+      explanation:
+        "Um cliente pode ter zero ou mais telefones (0,N), e um telefone está associado a exatamente um cliente (1,1).",
+    },
+    {
+      id: "q40",
+      text: "40. Em um relacionamento entre CURSO e MATÉRIA: Um curso pode ter várias matérias; uma matéria pode pertencer a vários cursos. Qual a cardinalidade correta?",
+      options: [
+        "CURSO (1,1) ——— (0,N) MATÉRIA",
+        "CURSO (1,N) ——— (1,N) MATÉRIA",
+        "CURSO (0,N) ——— (0,N) MATÉRIA",
+        "CURSO (0,1) ——— (1,N) MATÉRIA",
+        "CURSO (1,1) ——— (1,1) MATÉRIA",
+      ],
+      answer: "CURSO (0,N) ——— (0,N) MATÉRIA",
+      explanation:
+        "É um relacionamento muitos-para-muitos (N:N), onde um curso pode ter zero ou mais matérias, e uma matéria pode estar em zero ou mais cursos.",
+    },
   ],
 
   // Método para obter uma questão por ID
