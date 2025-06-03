@@ -272,6 +272,76 @@ const QuizQuestions = {
       explanation:
         "Uma das metas da normalização é eliminar dependências funcionais parciais, especialmente na 2ª Forma Normal (2FN), para garantir integridade e evitar redundância.",
     },
+    {
+      id: "q21",
+      text: "21. Em um relacionamento entre PROFESSOR e DISCIPLINA:\n- Um professor pode lecionar várias disciplinas\n- Uma disciplina deve ser lecionada por exatamente um professor\nQual a cardinalidade correta?",
+      options: [
+        "professor (1,1) -------- (0,N) disciplina",
+        "professor (1,N) -------- (0,1) disciplina",
+        "professor (0,N) -------- (1,1) disciplina",
+        "professor (0,1) -------- (1,N) disciplina",
+        "professor (1,N) -------- (1,N) disciplina",
+      ],
+      answer: "professor (0,N) -------- (1,1) disciplina",
+      explanation:
+        "Um professor pode lecionar várias disciplinas (ou nenhuma), enquanto cada disciplina é lecionada por exatamente um professor.",
+    },
+    {
+      id: "q22",
+      text: "22. No relacionamento entre FUNCIONÁRIO e PROJETO:\n- Um funcionário pode participar de vários projetos\n- Um projeto pode ter vários funcionários\nQual a cardinalidade correta?",
+      options: [
+        "funcionário (1,1) -------- (0,N) projeto",
+        "funcionário (0,N) -------- (0,N) projeto",
+        "funcionário (1,N) -------- (1,N) projeto",
+        "funcionário (0,1) -------- (1,1) projeto",
+        "funcionário (1,1) -------- (1,1) projeto",
+      ],
+      answer: "funcionário (0,N) -------- (0,N) projeto",
+      explanation:
+        "Ambos podem se relacionar com vários registros ou nenhum, configurando um relacionamento N:N (muitos-para-muitos).",
+    },
+    {
+      id: "q23",
+      text: "23. Em um relacionamento entre CLIENTE e PEDIDO:\n- Um cliente pode fazer vários pedidos ou nenhum\n- Todo pedido deve estar associado a um cliente\nQual a cardinalidade correta?",
+      options: [
+        "cliente (1,N) -------- (0,N) pedido",
+        "cliente (0,N) -------- (0,1) pedido",
+        "cliente (1,1) -------- (1,N) pedido",
+        "cliente (0,N) -------- (1,1) pedido",
+        "cliente (0,N) -------- (1,N) pedido",
+      ],
+      answer: "cliente (0,N) -------- (1,1) pedido",
+      explanation:
+        "Cada pedido pertence obrigatoriamente a um cliente (1,1), enquanto o cliente pode fazer vários ou nenhum pedido (0,N).",
+    },
+    {
+      id: "q24",
+      text: "24. Em um DER, a associação de atributos diretamente ao relacionamento é válida quando:",
+      options: [
+        "O relacionamento for do tipo 1:1",
+        "Existir um relacionamento N:N com atributos próprios",
+        "As entidades tiverem chaves compostas",
+        "For necessário evitar o uso de tabelas auxiliares",
+        "Todos os relacionamentos tiverem atributos comuns",
+      ],
+      answer: "Existir um relacionamento N:N com atributos próprios",
+      explanation:
+        "Atributos em relacionamentos são comuns em relacionamentos N:N, pois não podem ser associados diretamente às entidades.",
+    },
+    {
+      id: "q25",
+      text: "25. Em modelagem conceitual, quando uma entidade precisa da existência de outra para ser identificada, temos:",
+      options: [
+        "Relacionamento binário",
+        "Herança",
+        "Entidade regular",
+        "Entidade fraca",
+        "Atributo composto",
+      ],
+      answer: "Entidade fraca",
+      explanation:
+        "Entidades fracas dependem de outra entidade (forte) para serem identificadas, geralmente com chave parcial e ligação obrigatória.",
+    },
   ],
 
   // Método para obter uma questão por ID
