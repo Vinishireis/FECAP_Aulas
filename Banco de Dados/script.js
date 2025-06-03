@@ -570,7 +570,7 @@ class DatabaseQuiz {
   constructor() {
     // Configurações
     this.settings = {
-      totalTime: 600, // 10 minutos em segundos
+      totalTime: 1200, // 20 minutos em segundos
       timeWarningThreshold: 60, // Alerta quando faltar 1 minuto
     };
 
