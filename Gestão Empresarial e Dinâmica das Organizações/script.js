@@ -573,15 +573,15 @@ class DatabaseQuiz {
     this.elements.resultModal.style.display = "block";
   }
 
-  getPerformanceMessage(percentage) {
+ getPerformanceMessage(percentage) {
     if (percentage >= 90)
-      return "Excelente! Você domina o assunto de Banco de Dados!";
+      return "Excelente! Você demonstra domínio completo de Gestão Empresarial e Dinâmica Organizacional! 👏";
     if (percentage >= 70)
-      return "Bom trabalho! Seus conhecimentos em BD são sólidos!";
+      return "Bom trabalho! Seu entendimento sobre os processos organizacionais e gestão é muito sólido!";
     if (percentage >= 50)
-      return "Você está no caminho certo! Revise os conceitos para melhorar.";
-    return "Recomendamos estudar mais os fundamentos de Banco de Dados antes de tentar novamente.";
-  }
+      return "Você está no caminho certo! Revise tópicos como estrutura organizacional e cultura empresarial para melhorar.";
+    return "Recomendamos revisar os fundamentos de Gestão Empresarial (estruturas, estratégias e dinâmicas) antes de tentar novamente.";
+}
 
   closeResultModal() {
     this.elements.resultModal.style.display = "none";
