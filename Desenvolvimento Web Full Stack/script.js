@@ -565,12 +565,12 @@ class DatabaseQuiz {
 
  getPerformanceMessage(percentage) {
     if (percentage >= 90)
-      return "Excelente! Você demonstra domínio completo de Gestão Empresarial e Dinâmica Organizacional! 👏";
+      return "Excelente! Você demonstra domínio completo de Desenvolvimento Web Full Stack e Dinâmica Organizacional! 👏";
     if (percentage >= 70)
       return "Bom trabalho! Seu entendimento sobre os processos organizacionais e gestão é muito sólido!";
     if (percentage >= 50)
       return "Você está no caminho certo! Revise tópicos como estrutura organizacional e cultura empresarial para melhorar.";
-    return "Recomendamos revisar os fundamentos de Gestão Empresarial (estruturas, estratégias e dinâmicas) antes de tentar novamente.";
+    return "Recomendamos revisar os fundamentos de Desenvolvimento Web Full Stack (estruturas, estratégias e dinâmicas) antes de tentar novamente.";
 }
 
   closeResultModal() {
